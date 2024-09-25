@@ -56,16 +56,16 @@ function Engine(){
     let B = getcomputerchoice()
     if ((A == 1 && B == 2) || (A == 2 && B == 3) || (A == 3 && B == 1)){
         console.log(`${myDictionary[A]} beat ${myDictionary[B]} , you win this round`)
-        console.log(++Humanscore , Compscore)
+        console.log(`you score ->${++Humanscore} , computer score -> ${Compscore}`)
     }
     else if((A == 1 && B == 3) || (A == 2 && B == 1) || (A == 3 && B == 2)){
         console.log(`${myDictionary[A]} doesn't beat ${myDictionary[B]} , you lose this round`)
-        console.log(Humanscore , ++Compscore)
+        console.log(`you score ->${Humanscore} , computer score -> ${++Compscore}`)
 
     }
     else{
         console.log("this round was  a Tie")
-        console.log(Humanscore,Compscore)
+        console.log(`you score ->${Humanscore} , computer score -> ${Compscore}`)
     }
     
 }
