@@ -17,7 +17,17 @@ function getcomputerchoice(){
     return Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 }
 function getHumanchoice(){
-    let s = prompt("Pick")
+    let s = prompt("Pick from  (Scissors , Paper , Rock ) or ( 1 , 2 , 3) respectively :)")
+    switch(s) {
+        case "1" :
+        case "2" :
+        case "3" :
+            return s
+            break
+        default :
+
+    }
+    
     correct = s[0].toUpperCase() + s.substring(1).toLowerCase() 
     return myDictionary[correct]
 }
