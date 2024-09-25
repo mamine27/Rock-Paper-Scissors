@@ -33,6 +33,14 @@ function res(){
     }
 }
 
+function notpossible(rnd , Hscore , coscore){
+    if ((round - rnd < coscore - Hscore) || (round - rnd < Hscore - coscore)){
+        return true
+    }
+    return false 
+
+}
+
 function Engine(){
     let A = getHumanchoice()
     let B = getcomputerchoice()
@@ -53,6 +61,9 @@ function Engine(){
 }
 
 for (let i = 0 ; i < round ; i++){
+    if (notpossible(i , Humanscore , Compscore)){
+        break
+    }
     Engine()
 }
 res()
