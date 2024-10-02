@@ -1,3 +1,8 @@
+
+/* font added from google
+    to use in the project
+    font-family: 'Gagalin', sans-serif;
+*/
 @font-face {
     font-family: 'Gagalin';
     src: url('/fonts/Gagalin-Regular.otf') format('woff2'),
@@ -6,30 +11,32 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+
+#page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
   
   
 body{
     background: linear-gradient(to right, rgb(221, 180, 46), rgb(255, 102, 13));
-
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
 
 }
-div{
+
+
+ #Top {
+    margin: 25px;
+    font-size: x-large;
+    flex: 0.1;
+    font-family: 'Gagalin', sans-serif;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: rgb(15, 15, 15);
-    padding: 25px;
-    font-family: 'Gagalin', sans-serif;
-    font-size: x-large;
-
-}
-
-div #Top {
-    display: flex;
-    justify-content: space-between;
-    /* align-items: center; */
     color: rgb(2, 2, 2);
     padding: 10px;
 
@@ -42,3 +49,17 @@ div h5{
 div h1{
     font-weight: 100;
 }
+
+
+ #playground{
+    flex: auto;
+    width: 100%;
+}
+ #footer{
+    flex:0.1;
+    align-self: center;
+    width: 100%;
+}
+
+
+
