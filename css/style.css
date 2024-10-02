@@ -60,6 +60,7 @@ div h1{
 
 
 #window{
+    box-sizing: border-box;
     width: 500px;
     height: 300px;
     margin: 50px;
@@ -69,6 +70,15 @@ div h1{
 }
 
 
+
+#window p {
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}
 #footer{
     flex:0.1;
     display: flex;
