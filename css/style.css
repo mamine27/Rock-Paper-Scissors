@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Gagalin';
+    src: url('/fonts/Gagalin-Regular.otf') format('woff2'),
+         url('/fonts/Gagalin-Regular.otf') format('woff'),
+         url('/fonts/Gagalin-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  
+body{
+    background: linear-gradient(to right, rgb(221, 180, 46), rgb(255, 102, 13));
+
+
+}
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(15, 15, 15);
+    padding: 25px;
+    font-family: 'Gagalin', sans-serif;
+    font-size: x-large;
+
+}
+
+div #Top {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    color: rgb(2, 2, 2);
+    padding: 10px;
+
+}
+div h5{
+    font-weight: 100;
+    font-size: smaller;
+}
+
+div h1{
+    font-weight: 100;
+}
