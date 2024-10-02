@@ -38,16 +38,17 @@ body{
     justify-content: space-between;
     align-items: center;
     color: rgb(2, 2, 2);
-    padding: 10px;
 
 }
 div h5{
     font-weight: 100;
     font-size: smaller;
+    margin: 30px;
 }
 
 div h1{
     font-weight: 100;
+    margin-left: 50px;
 }
 
 
