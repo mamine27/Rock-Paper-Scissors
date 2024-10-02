@@ -31,7 +31,6 @@ body{
 
 
  #Top {
-
     font-size: x-large;
     flex: 0.1;
     font-family: 'Gagalin', sans-serif;
@@ -39,12 +38,15 @@ body{
     justify-content: space-between;
     align-items: center;
     color: rgb(2, 2, 2);
-    padding: 10px;
-
+    /* padding: 40px; */
+    border-bottom-style:groove;
+    border-bottom-color :rgba(0, 0, 0, 0.5) ;
+    border-bottom-width: 2px;
 }
 div h5{
     font-weight: 100;
     font-size: smaller;
+    margin-right: 30px;
 }
 
 div h1{
@@ -179,6 +181,45 @@ div h1{
  
 #lower{
     flex: 0.75;
+    display: flex;
+    flex-direction: row;
+}
+#option{
+    display: flex;
+    /* justify-content:; */
+    flex:1;
+}
+#option button{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#option button img {
+    height: 70%;
+    width: 70%;
+}
+#rst{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#rst button{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-items: center;
+
+}
+#rst button img{
+    height: 50%;
+    width: 70%;
 }
 
 #footer{
