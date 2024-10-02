@@ -13,6 +13,7 @@
   }
 
 #page{
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -60,6 +61,8 @@ div h1{
 
 
 #window{
+    min-width: 350px;
+    /* white-space: nowrap; */
     box-sizing: border-box;
     width: 500px;
     height: 300px;
@@ -74,7 +77,8 @@ div h1{
 #window p {
   padding: 20px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  
+  font-size: clamp(10px, 12px, 1.5rem); 
   line-height: 1.5;
   color: #333;
   text-align: justify;
