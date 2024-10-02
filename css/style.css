@@ -30,7 +30,6 @@ body{
 
 
  #Top {
-    margin: 25px;
     font-size: x-large;
     flex: 0.1;
     font-family: 'Gagalin', sans-serif;
@@ -52,14 +51,30 @@ div h1{
 
 
  #playground{
-    flex: auto;
+    flex: 1;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
- #footer{
+
+
+#window{
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: rgba(240, 236, 236 ,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#footer{
     flex:0.1;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
     width: 100%;
+    /* background: linear-gradient(to right, rgb(243, 85, 151), rgb(45, 98, 177)); */
 }
-
-
-
