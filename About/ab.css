@@ -58,6 +58,27 @@ div h1{
     align-items: center;
 }
 
+
+#window{
+    box-sizing: border-box;
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: rgba(240, 236, 236 ,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+#window p {
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}
 #footer{
     flex:0.1;
     display: flex;
