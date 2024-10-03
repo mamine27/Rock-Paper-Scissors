@@ -9,6 +9,7 @@ var wndw = document.querySelector("#window")
 var compwndw = document.querySelector('#computer')
 var hmnwndw = document.querySelector("#human")
 var htrstbtn = document.querySelector("#reset")
+var tie = document.querySelector("#filler")
 
 
 
@@ -50,7 +51,7 @@ var htrstbtn = document.querySelector("#reset")
 var Humanscore = 0
 var Compscore = 0
 var correct
-var round = 1
+var round = 3
 var A
 var chosed
 var counter = 0
@@ -112,8 +113,11 @@ htrstbtn.addEventListener("click", function() {
     htrn.textContent = 1
     hmnwndw.innerHTML = `<img src="Images/rock.png">`;
     compwndw.innerHTML = `<img src="Images/rock.png">`;
-    round = 3
+    round =  3
     counter = 0 
+    tie.textContent = "Round"
+    htrn.textContent = 1
+
 });
     
 
@@ -129,8 +133,13 @@ function res(){
         compwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
         htcompscore.textContent = "WINNER!"
     }
-    else{
+    else if (Humanscore == Compscore){
         console.log("this was epic but it's tie")
+        hmnwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sec.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        compwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sls.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        tie.textContent = "TIE!"
+        htrn.textContent = ''
+
         
     }
 }
@@ -163,6 +172,10 @@ function res(){
 
 function notpossible(rnd , Hscore , coscore){
     if ((round - rnd < coscore - Hscore) || (round - rnd < Hscore - coscore)){
+       
+        return true
+    }
+    if(rnd == round){
         return true
     }
     return false 
