@@ -1,7 +1,60 @@
+var hthumanscore = document.querySelector("#humanscore")
+var htcompscore = document.querySelector("#compscore")
+var htpaperbt = document.querySelector("#paper")
+var htrockbt = document.querySelector("#rock")
+var htscisbt = document.querySelector("#scis")
+var htopbt = document.querySelector("#option")
+var htrn = document.querySelector("#Round")
+var wndw = document.querySelector("#window")
+var compwndw = document.querySelector('#computer')
+var hmnwndw = document.querySelector("#human")
+var htrstbtn = document.querySelector("#reset")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var Humanscore = 0
 var Compscore = 0
 var correct
-var round = prompt("How many rounds?")
+var round = 1
+var A
+var chosed
+var counter = 0
+
 
 // dictionary to communicate between the comp and user
 const myDictionary = {
@@ -15,33 +68,98 @@ const myDictionary = {
 
 function getcomputerchoice(){
     return Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-}
-function getHumanchoice(){
-    let s = prompt("Pick from  (Scissors , Paper , Rock ) or ( 1 , 2 , 3) respectively :)")
-    switch(s) {
-        case "1" :
-        case "2" :
-        case "3" :
-            return s
-            break
-        default :
 
+}
+function imgchooser(n){
+    return Math.floor(Math.random() * (n - 0 + 0)) ;
+
+}
+function imager(){
+    gifs = ['aizen','gj','op','sm','ss','st','y']
+    return gifs[imgchooser(7)]
+}
+
+
+
+htopbt.addEventListener("click", function(event) {
+    if(! notpossible(counter , Humanscore , Compscore)){
+        if (event.target.id === "paper") {
+                A = 2
+                Engine() 
+                hmnwndw.innerHTML = `<img src="Images/pap.png">`;
+            } else if (event.target.id === "rock") {
+                A = 3
+                Engine()
+                hmnwndw.innerHTML = `<img src="Images/rock.png">`;
+
+            } else if (event.target.id === "scis") {
+                A = 1
+                Engine()
+                hmnwndw.innerHTML = `<img src="Images/sci.png">`;
+
+        }
     }
     
-    correct = s[0].toUpperCase() + s.substring(1).toLowerCase() 
-    return myDictionary[correct]
-}
+    
+    
+});
+
+htrstbtn.addEventListener("click", function() {
+    Humanscore = 0
+    Compscore = 0
+    hthumanscore.textContent = Humanscore
+    htcompscore.textContent = Compscore
+    htrn.textContent = 1
+    hmnwndw.innerHTML = `<img src="Images/rock.png">`;
+    compwndw.innerHTML = `<img src="Images/rock.png">`;
+    round = 3
+    counter = 0 
+});
+    
+
 function res(){
     if (Humanscore > Compscore){
         console.log("Nah , you won")
+        hmnwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        hthumanscore.textContent = "WINNER!"
+        htcompscore.textContent = "LOSER!"
     }
     else if (Humanscore < Compscore){
         console.log("you were cooked")
+        compwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        htcompscore.textContent = "WINNER!"
     }
     else{
         console.log("this was epic but it's tie")
+        
     }
 }
+    function compchoosinganimation() {
+        chosed = getcomputerchoice();
+        let imgs = ["sci", "pap", "rock"];
+        let index = 0;
+        let interval = setInterval(() => {
+            compwndw.innerHTML = `<img src="Images/${imgs[index]}.png">`;
+            index = (index + 1) % imgs.length;
+        }, 300); // Adjust interval time as needed
+        
+        // Optionally, stop after a few cycles
+        setTimeout(() => {clearInterval(interval);
+            hthumanscore.textContent = Humanscore
+            htcompscore.textContent = Compscore
+            compwndw.innerHTML = `<img src="Images/${imgs[chosed - 1]}.png">`;
+            console.log("computer chose " + myDictionary[chosed])
+            htrn.textContent = counter
+            if(notpossible(counter , Humanscore , Compscore)){
+                res()
+            }
+
+        }, 1000); // Stops after 5 seconds
+    
+}
+
+
+
 
 function notpossible(rnd , Hscore , coscore){
     if ((round - rnd < coscore - Hscore) || (round - rnd < Hscore - coscore)){
@@ -52,8 +170,9 @@ function notpossible(rnd , Hscore , coscore){
 }
 
 function Engine(){
-    let A = getHumanchoice()
-    let B = getcomputerchoice()
+    compchoosinganimation()   
+    let B = chosed
+    console.log("you chose " + myDictionary[A] + " , computer chose " + myDictionary[B])
     if ((A == 1 && B == 2) || (A == 2 && B == 3) || (A == 3 && B == 1)){
         console.log(`${myDictionary[A]} beat ${myDictionary[B]} , you win this round`)
         console.log(`you score ->${++Humanscore} , computer score -> ${Compscore}`)
@@ -61,20 +180,17 @@ function Engine(){
     else if((A == 1 && B == 3) || (A == 2 && B == 1) || (A == 3 && B == 2)){
         console.log(`${myDictionary[A]} doesn't beat ${myDictionary[B]} , you lose this round`)
         console.log(`you score ->${Humanscore} , computer score -> ${++Compscore}`)
-
     }
     else{
         console.log("this round was  a Tie")
         console.log(`you score ->${Humanscore} , computer score -> ${Compscore}`)
     }
+    counter ++
+
     
 }
 
-for (let i = 0 ; i < round ; i++){
-    if (notpossible(i , Humanscore , Compscore)){
-        break
-    }
-    Engine()
-}
-res()
+
+
+// res()
 

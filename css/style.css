@@ -73,6 +73,12 @@ div h1{
     background-color: rgba(240, 236, 236 ,0.5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+#window h2{
+    flex: 1;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Gagalin';
+}
 #upper{
     flex: 1;
     display: flex;
@@ -193,11 +199,13 @@ div h1{
     height: 40px;
     margin: 10px;
     border-radius: 30px;
+    background-color: rgba(15, 177, 93, 0.7);    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #option button img {
     height: 70%;
     width: 70%;
+    pointer-events: none;
 }
 #rst{
     flex:1;
