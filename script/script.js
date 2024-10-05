@@ -103,19 +103,19 @@ htrstbtn.addEventListener("click", function() {
 function res(){
     if (Humanscore > Compscore){
         console.log("Nah , you won")
-        hmnwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        hmnwndw.innerHTML = `<div class = "nwimg" style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
         hthumanscore.textContent = "WINNER!"
         htcompscore.textContent = "LOSER!"
     }
     else if (Humanscore < Compscore){
         console.log("you were cooked")
-        compwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        compwndw.innerHTML = `<div class = "nwimg" style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/win/${imager()}.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
         htcompscore.textContent = "WINNER!"
     }
     else if (Humanscore == Compscore){
         console.log("this was epic but it's tie")
-        hmnwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sec.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
-        compwndw.innerHTML = `<div style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sls.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        hmnwndw.innerHTML = `<div class = "nwimg" style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sec.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
+        compwndw.innerHTML = `<div class = "nwimg" style="overflow: hidden; width: 100%; height: 100%; border-radius: 50%;"><img src="Images/sls.gif" style="width: 120%; height: 120%; object-fit: cover; transform: translate(-10%, -10%);"></div>`;
         tie.textContent = "TIE!"
         htrn.textContent = ''
 
