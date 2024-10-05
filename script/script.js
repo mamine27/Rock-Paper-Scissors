@@ -1,3 +1,4 @@
+//
 var hthumanscore = document.querySelector("#humanscore")
 var htcompscore = document.querySelector("#compscore")
 var htpaperbt = document.querySelector("#paper")
@@ -22,39 +23,18 @@ var tie = document.querySelector("#filler")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var Humanscore = 0
 var Compscore = 0
 var correct
-var round = 3
+let round;
+function init(numberofrounds) {
+    round = numberofrounds
+  }
 var A
 var chosed
 var counter = 0
+
+console.log(`rounds inputed ${round}`)
 
 
 // dictionary to communicate between the comp and user
@@ -113,7 +93,6 @@ htrstbtn.addEventListener("click", function() {
     htrn.textContent = 1
     hmnwndw.innerHTML = `<img src="Images/rock.png">`;
     compwndw.innerHTML = `<img src="Images/rock.png">`;
-    round =  3
     counter = 0 
     tie.textContent = "Round"
     htrn.textContent = 1
