@@ -1,4 +1,7 @@
 ---
+title: "Rock-Paper-Scissors Game"
+layout: "default"  # Adjust this based on your layout needs
+---
 
 # Rock-Paper-Scissors Game
 
@@ -23,7 +26,7 @@ A simple **Rock-Paper-Scissors** game built with HTML, CSS, and JavaScript. This
 
 ## Design Files
 The design used for this project was created using [Canva](https://www.canva.com). You can find the exported design files in the `design/` folder.
-  
+
 ## Technologies
 - **HTML5**: For the structure of the game interface.
 - **CSS3**: For styling and layout.
@@ -70,12 +73,6 @@ If you'd like to contribute to this project, feel free to submit a pull request 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
 ## Disclaimer
 
 All images and GIFs used in this project are not my own. They are sourced from various platforms, including GIPHY. I do not claim ownership of any of these assets. If you are the owner of any content used and would like it removed, please contact me.
-
----
-
-
-
