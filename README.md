@@ -76,3 +76,6 @@ Run the program in your console.
 Enter your choice (rock, paper, or scissors) when prompted.
 The game will display the result of each round.
 result will be shown after all rounds played
+
+## Design Files
+The design used for this project was created using [Canva](https://www.canva.com). You can find the exported design files in the `design/` folder.
