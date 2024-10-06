@@ -6,7 +6,7 @@ A simple **Rock-Paper-Scissors** game built with HTML, CSS, and JavaScript. This
 
 ## Table of Contents
 - [Features](#features)
-- [Design](#Design Files)
+- [Design](#Design-Files)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [How to Play](#how-to-play)
