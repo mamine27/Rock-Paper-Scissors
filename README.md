@@ -6,6 +6,7 @@ A simple **Rock-Paper-Scissors** game built with HTML, CSS, and JavaScript. This
 
 ## Table of Contents
 - [Features](#features)
+- [Design](#Design Files)
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [How to Play](#how-to-play)
@@ -19,6 +20,9 @@ A simple **Rock-Paper-Scissors** game built with HTML, CSS, and JavaScript. This
 - Display the results of each round, including the player's choice, computer's choice, and the outcome.
 - **Animated GIFs** are displayed to represent the winner or in case of a tie.
 - Keeps track of scores for both the player and the computer.
+
+## Design Files
+The design used for this project was created using [Canva](https://www.canva.com). You can find the exported design files in the `design/` folder.
   
 ## Technologies
 - **HTML5**: For the structure of the game interface.
@@ -66,16 +70,12 @@ If you'd like to contribute to this project, feel free to submit a pull request 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+
+## Disclaimer
+
+All images and GIFs used in this project are not my own. They are sourced from various platforms, including GIPHY. I do not claim ownership of any of these assets. If you are the owner of any content used and would like it removed, please contact me.
+
 ---
 
-This includes the GIF feature for the winner and tie outcomes. Let me know if you’d like more changes or additions!
 
-How to Play
 
-Run the program in your console.
-Enter your choice (rock, paper, or scissors) when prompted.
-The game will display the result of each round.
-result will be shown after all rounds played
-
-## Design Files
-The design used for this project was created using [Canva](https://www.canva.com). You can find the exported design files in the `design/` folder.
