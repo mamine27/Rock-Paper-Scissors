@@ -5,9 +5,9 @@
 */
 @font-face {
     font-family: 'Gagalin';
-    src: url('/fonts/Gagalin-Regular.otf') format('woff2'),
-         url('/fonts/Gagalin-Regular.otf') format('woff'),
-         url('/fonts/Gagalin-Regular.otf') format('truetype');
+    src: url('../fonts/Gagalin-Regular.otf') format('woff2'),
+         url('../fonts/Gagalin-Regular.otf') format('woff'),
+         url('../fonts/Gagalin-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
