@@ -1,4 +1,4 @@
-//
+// var needed for the game
 var hthumanscore = document.querySelector("#humanscore")
 var htcompscore = document.querySelector("#compscore")
 var htpaperbt = document.querySelector("#paper")
@@ -11,22 +11,12 @@ var compwndw = document.querySelector('#computer')
 var hmnwndw = document.querySelector("#human")
 var htrstbtn = document.querySelector("#reset")
 var tie = document.querySelector("#filler")
-
-
-
-
-
-
-
-
-
-
-
-
 var Humanscore = 0
 var Compscore = 0
 var correct
 let round;
+
+//numberofrounds is imported from bool.js
 function init(numberofrounds) {
     round = numberofrounds
   }
@@ -34,7 +24,6 @@ var A
 var chosed
 var counter = 0
 
-console.log(`rounds inputed ${round}`)
 
 
 // dictionary to communicate between the comp and user
@@ -47,21 +36,27 @@ const myDictionary = {
   3 :"Rock"
 };
 
+
+
 function getcomputerchoice(){
     return Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 
 }
-function imgchooser(n){
-    return Math.floor(Math.random() * (n - 0 + 0)) ;
+
+// chooses random number from 0 to n-1
+function randnumberchooserforimg(n){
+    return Math.floor(Math.random() * (n)) ;
 
 }
+
+// returns a random image string from the list of gifs in /Images/win folder
 function imager(){
     gifs = ['aizen','gj','op','sm','ss','st','y']
-    return gifs[imgchooser(7)]
+    return gifs[randnumberchooserforimg(6)]
 }
 
 
-
+//listnes for the choice of the player Each choice represents a number from 1 to 3
 htopbt.addEventListener("click", function(event) {
     if(! notpossible(counter , Humanscore , Compscore)){
         if (event.target.id === "paper") {
@@ -85,6 +80,9 @@ htopbt.addEventListener("click", function(event) {
     
 });
 
+
+
+// listnes for the reset button and resets values that have been changed
 htrstbtn.addEventListener("click", function() {
     Humanscore = 0
     Compscore = 0
@@ -99,7 +97,7 @@ htrstbtn.addEventListener("click", function() {
 
 });
     
-
+//shows the final outcome
 function res(){
     if (Humanscore > Compscore){
         console.log("Nah , you won")
@@ -122,36 +120,40 @@ function res(){
         
     }
 }
-    function compchoosinganimation() {
-        chosed = getcomputerchoice();
-        let imgs = ["sci", "pap", "rock"];
-        let index = 0;
-        let interval = setInterval(() => {
-            compwndw.innerHTML = `<img src="Images/${imgs[index]}.png">`;
-            index = (index + 1) % imgs.length;
-        }, 300); // Adjust interval time as needed
-        
-        // Optionally, stop after a few cycles
-        setTimeout(() => {clearInterval(interval);
-            hthumanscore.textContent = Humanscore
-            htcompscore.textContent = Compscore
-            compwndw.innerHTML = `<img src="Images/${imgs[chosed - 1]}.png">`;
-            console.log("computer chose " + myDictionary[chosed])
-            htrn.textContent = counter
-            if(notpossible(counter , Humanscore , Compscore)){
-                res()
-            }
 
-        }, 1000); // Stops after 5 seconds
+//this just iterates through rock paper scissors img and animates it
+function compchoosinganimation() {
+    chosed = getcomputerchoice();
+    let imgs = ["sci", "pap", "rock"];
+    let index = 0;
+    let interval = setInterval(() => {
+        compwndw.innerHTML = `<img src="Images/${imgs[index]}.png">`;
+        index = (index + 1) % imgs.length;
+    }, 300); // Adjust interval time as needed
+    
+
+    //after animation is done shows the score of the current round if it's not the last round
+    setTimeout(() => {clearInterval(interval);
+        hthumanscore.textContent = Humanscore
+        htcompscore.textContent = Compscore
+        compwndw.innerHTML = `<img src="Images/${imgs[chosed - 1]}.png">`;
+        console.log("computer chose " + myDictionary[chosed])
+        htrn.textContent = counter
+        if(notpossible(counter , Humanscore , Compscore)){
+            res()
+        }
+
+    }, 1000); // Stops after 1 seconds
     
 }
 
 
 
-
+//checks if game is finished by checking the remaining round and the difference between the scores  of comp and human
 function notpossible(rnd , Hscore , coscore){
+    //round - rnd = remaining rounds and Hscore - coscore = difference between scores 
+    //remaining round should be always greater than the difference for the game to continue
     if ((round - rnd < coscore - Hscore) || (round - rnd < Hscore - coscore)){
-       
         return true
     }
     if(rnd == round){
@@ -161,6 +163,9 @@ function notpossible(rnd , Hscore , coscore){
 
 }
 
+
+
+//judges who won the round || the choices are converted to numbers you can see the dictionary above
 function Engine(){
     compchoosinganimation()   
     let B = chosed
@@ -178,11 +183,5 @@ function Engine(){
         console.log(`you score ->${Humanscore} , computer score -> ${Compscore}`)
     }
     counter ++
-
-    
 }
-
-
-
-// res()
 

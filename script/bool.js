@@ -1,9 +1,12 @@
+//this script is for the starting page of the game
+
 let wnd = document.getElementById("window")
 const star = document.querySelector("#st")
 var inputed = document.querySelector("#input")
 const all = document.querySelector('body')
 
-
+//when start button is clicked it adds the html and also the script needed for the game
+//and 
 star.addEventListener('click', function() {
     // const numberofrounds = inputed.value
     window.innerHTML = ``
@@ -29,10 +32,14 @@ star.addEventListener('click', function() {
                     </div>
                 </div>
                 `;
+
+
+    
     const script = document.createElement('script');
     script.src = 'script/script.js';
     script.defer = true;
     
+    //exporting  the input value to be used in script.js
     script.onload = function() {
       init(inputed.value);
     };

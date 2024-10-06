@@ -89,24 +89,58 @@ div h1{
 }
 
 #ok{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: 'Gagalin', sans-serif;
+    margin: 10px;
 
 }
+#low{
+    margin-top: 20%;
 
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+}
 #st{
     margin-left: 5px;
-    border-radius: 5px;
+    border-radius: 30px;
     font-family: 'Gagalin';
-}
-#input{
-    border-color: rgb(5, 166, 11);
-    box-shadow: inset;
-}
-#low p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
-    color: rgb(6, 32, 98);
+    width: 40px;
+    height: 30px;
+    background: none;
+    border-style: none;
 }
 
+
+#input{
+    background-color: red;
+    border-style: none;
+    box-shadow: inset;
+    border-radius: 30px;
+    margin-left: 12px;
+    width: 100px;
+    padding: 7px;
+}
+#low p {
+    font-family: 'gagalin';
+    font-weight: bolder;
+    font-size: 20px;
+}
+#bt {
+    background: none;
+    background-image: none;
+    width: 120%;
+    height: 120%; 
+    object-fit: cover; 
+    transform: translate(-10%, -10%)
+}
 #upper {
   flex: 1;
   display: flex;
