@@ -121,7 +121,7 @@ function res(){
     }
 }
 
-//this just iterates through rock paper scissors img and animates it
+//this just iterates through rock paper scissors img and makes the computer choosing illustration
 function compchoosinganimation() {
     chosed = getcomputerchoice();
     let imgs = ["sci", "pap", "rock"];
@@ -133,6 +133,7 @@ function compchoosinganimation() {
     
 
     //after animation is done shows the score of the current round if it's not the last round
+    // and updates the score board
     setTimeout(() => {clearInterval(interval);
         hthumanscore.textContent = Humanscore
         htcompscore.textContent = Compscore
